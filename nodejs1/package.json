@@ -1,0 +1,17 @@
+{
+  "name": "nodejs1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonathan Scott",
+  "license": "MIT",
+  "dependencies": {
+    "path": "^0.12.7",
+    "xlsx": "^0.18.5",
+    "fs-extra": "^10.1.0"
+  }
+}

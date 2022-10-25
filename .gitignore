@@ -1,0 +1,10 @@
+# Ignore redundant git content
+*.git
+
+# Ignore Environmental Variables
+.env
+
+# Ignore any after-installment content
+*node_modules
+*package-lock.json
+
