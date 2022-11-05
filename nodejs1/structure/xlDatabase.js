@@ -6,6 +6,7 @@
 import xlsx from "xlsx";
 import path from "path";
 import fs from "fs-extra";
+import { inspect } from "util";
 
 class ExcelFile {
     /**
@@ -40,10 +41,9 @@ class ExcelFile {
     serialize(type) {
         switch (type) {
             case "json":
-                return Object.values(this.workbook.Sheets).map(s => xlsx.utils.sheet_to_json(s))
-
+                return Object.keys(this.workbook.Sheets).map(e => {return {[e]: xlsx.utils.sheet_to_json(this.workbook.Sheets[e]).map(s => s)}})
             default:
-                return this.workbook.Sheets.map(e => e)
+                return Object.keys(this.workbook.Sheets).map(e => this.workbook.Sheets[e])
         }
     }
 }
